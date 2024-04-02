@@ -1,0 +1,18 @@
+.createInput {
+    width: 400px;
+}
+
+.example-form {
+    display: flex;
+    justify-content: center;
+}
+
+.but {
+    background: #4a24f1;
+    color: #f0fff3;
+}
+
+.butPosetion {
+    display: flex;
+    justify-content: flex-end;
+}
