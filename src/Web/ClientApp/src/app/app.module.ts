@@ -12,13 +12,15 @@ import {NavMenuComponent} from "./UI/nav-menu/nav-menu.component";
 import {AppRoutingModule} from "./router-modul";
 import {HomeComponent} from "./UI/home/home.component";
 import {BaseHelperCompannet} from "./Core/Helper/BaseHelperCompannet";
+import {FormBaseComponent} from "./Core/Helper/FormBaseComponent";
 
 @NgModule({
     declarations: [
         AppComponent,
         NavMenuComponent,
         HomeComponent,
-        BaseHelperCompannet
+        BaseHelperCompannet,
+        FormBaseComponent
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),

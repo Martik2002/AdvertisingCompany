@@ -61,4 +61,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 mat-form-field {
   width: 100%;
+  mat-error {
+    display: none !important;
+  }
+
+  mat-error:first-child {
+    display: block !important;
+  }
+}
+
+mat-error {
+  min-height: 30px;
 }
