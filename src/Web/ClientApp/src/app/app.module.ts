@@ -1,7 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {RouterModule} from '@angular/router';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {ModalModule} from 'ngx-bootstrap/modal';
 import {AppComponent} from './app.component';
@@ -24,7 +23,6 @@ import {BaseHelperCompannet} from "./Core/Helper/BaseHelperCompannet";
         BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
         HttpClientModule,
         FormsModule,
-        RouterModule.forRoot([]),
         BrowserAnimationsModule,
         ModalModule.forRoot(),
         AppMaterialModule,
@@ -36,4 +34,5 @@ import {BaseHelperCompannet} from "./Core/Helper/BaseHelperCompannet";
     bootstrap: [AppComponent]
 })
 export class AppModule {
+
 }

@@ -16,7 +16,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { DateAdapter, MatNativeDateModule, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import {  MatNativeDateModule,  MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
@@ -90,7 +90,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
         MatRadioModule,
         MatTreeModule,
         MatChipsModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+      MatTableModule
+
     ],
     providers: [
         {

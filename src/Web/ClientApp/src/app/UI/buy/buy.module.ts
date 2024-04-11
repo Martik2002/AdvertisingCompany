@@ -6,6 +6,8 @@ import { RouterModule, Routes } from "@angular/router";
 import {BuyComponent} from "./buy.component";
 import {BuyCreateComponent} from "./buy-create/buy-create.component";
 import {AppMaterialModule} from "../../app-material.model";
+import { BuyTypeComponent } from './buy-type/buy-type.component';
+import { RentComponent } from './rent/rent.component';
 
 const routes: Routes = [
     {
@@ -16,12 +18,18 @@ const routes: Routes = [
         path: 'create',
         component: BuyCreateComponent,
     },
-   
+    {
+        path: 'buy',
+        component: BuyTypeComponent,
+    },
+
 ]
 @NgModule({
     declarations: [
         BuyComponent,
-        BuyCreateComponent
+        BuyCreateComponent,
+        BuyTypeComponent,
+        RentComponent
     ],
     imports: [
         CommonModule,

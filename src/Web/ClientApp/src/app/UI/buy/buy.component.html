@@ -7,17 +7,17 @@
             <img mat-card-image src="assets/images/tner.png" alt="Photo of a Shiba Inu">
             <mat-card-content>
                 <h4>name</h4>
+                <h4>Kod</h4>
                 <p>price</p>
                 <p>addres</p>
                 <p>
                    descreption
                 </p>
-                
-                
+
             </mat-card-content>
             <mat-card-actions>
-                <button mat-button>Վարձով</button>
-                <button mat-button>Գնել</button>
+                <button mat-button (click)="this.openBuyTypeDialog()" >Վարձով</button>
+                <button mat-button > <a routerLink="/buyAll/buy">Գնել</a></button>
             </mat-card-actions>
         </mat-card>
 
