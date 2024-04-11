@@ -1,18 +1,24 @@
-<form class="example-form">
+<form [formGroup]="form" class="example-form">
     <div class="createInput">
 
         <h2 mat-dialog-title>Անշարժ գույքի ավելացում</h2>
             <mat-form-field appearance="outline">
                 <mat-label>Տեսակը</mat-label>
-                <input matInput placeholder="Տուն">
+                <input formControlName="type" matInput placeholder="Տուն">
+                <mat-error>{{V_MSG.REQUIRED}}</mat-error>
+                <mat-error>{{V_MSG.amLetters_space}}</mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Գինը</mat-label>
-                <input matInput placeholder="50000դրամ">
+                <input formControlName="price" matInput placeholder="50000դրամ">
+                <mat-error>{{V_MSG.REQUIRED}}</mat-error>
+                <mat-error>{{V_MSG.only_digits}}</mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Հասցե</mat-label>
-                <input matInput placeholder="Երևան Տերյան 5">
+                <input formControlName="addres" matInput placeholder="Երևան Տերյան 5">
+                <mat-error *ngIf="this.form.get('addres').errors.requkired">{{V_MSG.REQUIRED}}</mat-error>
+                <mat-error>{{V_MSG.amLetters_space}}</mat-error>   
             </mat-form-field>
         <section class="example-section">
             <span>Վարձույթի տեսակ:</span>
@@ -21,7 +27,8 @@
         </section>
             <mat-form-field appearance="outline">
                 <mat-label>Նկարագրություն</mat-label>
-                <textarea cols="10" rows="5" matInput placeholder="Նկարագրություն"></textarea>
+                <textarea formControlName="descreption" cols="10" rows="5" matInput placeholder="Նկարագրություն"></textarea>
+                <mat-error>{{V_MSG.maxlengths(200)}}</mat-error>
             </mat-form-field>
         <div class="butPosetion">
             <button mat-button [mat-dialog-close]="true">Չեղարկել</button>
