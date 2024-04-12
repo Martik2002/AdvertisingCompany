@@ -1,0 +1,30 @@
+div {
+  margin-top: 15px;
+}
+
+.itemTxet {
+  font-size: 18px;
+}
+
+.ather {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.iteam {
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+.position{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.but {
+  background: #4a24f1;
+  color: #f0fff3;
+}
