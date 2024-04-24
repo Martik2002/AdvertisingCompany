@@ -1,0 +1,16 @@
+<div *ngIf="!this.loginCheck" class="container">
+    <h2>Login</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" (click)="loginSubmit()" value="Login">
+    </form>
+</div>
+
+<div *ngIf="this.loginCheck"  class="logout-dialog">
+    <h2>Are you sure you want to log out?</h2>
+    <div class="logout-buttons">
+        <button mat-button class="but" [mat-dialog-close]="true" (click)="logout()">Logout</button>
+        <button mat-button [mat-dialog-close]="false" >Cancel</button>
+    </div>
+</div>
