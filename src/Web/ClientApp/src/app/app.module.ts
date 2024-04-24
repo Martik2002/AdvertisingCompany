@@ -12,6 +12,7 @@ import {AppRoutingModule} from "./router-modul";
 import {HomeComponent} from "./UI/home/home.component";
 import {BaseHelperCompannet} from "./Core/Helper/BaseHelperCompannet";
 import {FormBaseComponent} from "./Core/Helper/FormBaseComponent";
+import {LoginModul} from "./UI/login/login.modul";
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import {FormBaseComponent} from "./Core/Helper/FormBaseComponent";
         NavMenuComponent,
         HomeComponent,
         BaseHelperCompannet,
-        FormBaseComponent
+        FormBaseComponent,
+        
     ],
     imports: [
         BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
@@ -28,7 +30,8 @@ import {FormBaseComponent} from "./Core/Helper/FormBaseComponent";
         BrowserAnimationsModule,
         ModalModule.forRoot(),
         AppMaterialModule,
-        AppRoutingModule
+        AppRoutingModule,
+        LoginModul,
     ],
     providers: [
         {provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true}

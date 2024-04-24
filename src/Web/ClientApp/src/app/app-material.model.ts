@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -27,12 +26,12 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
     imports: [
         MatInputModule,
         MatFormFieldModule,
-        MatButtonModule,
         MatSelectModule,
         MatIconModule,
         MatListModule,
@@ -63,7 +62,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     exports: [
         MatInputModule,
         MatFormFieldModule,
-        MatButtonModule,
         MatSelectModule,
         MatIconModule,
         MatListModule,

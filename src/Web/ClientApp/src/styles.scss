@@ -12,6 +12,7 @@
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
+  color:#ff7f0e !important;
 }
 html, body {
   height: 100%;
@@ -31,13 +32,14 @@ code {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
+  background-color: #ff7f0e !important;
+  color: white !important;
   border-color: #1861ac;
 }
 
 .mat-button {
-  color: #6200EE;
+  background-color: #ff7f0e !important;
+  color: white !important;
 }
 
 
@@ -74,3 +76,10 @@ mat-form-field {
 mat-error {
   min-height: 30px;
 }
+ .material-symbols-outlined {
+   font-variation-settings:
+           'FILL' 0,
+           'wght' 400,
+           'GRAD' 0,
+           'opsz' 24
+ }

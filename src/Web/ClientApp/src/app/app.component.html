@@ -1,6 +1,9 @@
 <body>
-  <app-nav-menu></app-nav-menu>
-  <main class="">
+<div *ngIf="!this.login" class="container">
+  <app-login></app-login>
+</div>
+  <app-nav-menu *ngIf="this.login"></app-nav-menu>
+  <main *ngIf="this.login" class="">
     <router-outlet></router-outlet>
   </main>
 </body>
