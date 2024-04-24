@@ -18,7 +18,8 @@ import {ValidationMessages} from "../../../Core/resources/validation-messages";
 })
 export class BuyCreateComponent extends FormBaseComponent implements OnInit{
 
-  
+  selectedFile: File | null = null;
+
   V_MSG = ValidationMessages;
   constructor(
       fb:FormBuilder
@@ -48,4 +49,24 @@ export class BuyCreateComponent extends FormBaseComponent implements OnInit{
       });
     
   }
+
+
+  imageUrl: string | ArrayBuffer | null = null;
+
+  onFileSelected(event: any): void {
+    const file: File = event.target.files[0];
+    if (file) {
+      this.readImage(file);
+    }
+  }
+
+  readImage(file: File): void {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      this.imageUrl = e.target?.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+
 }

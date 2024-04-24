@@ -1,23 +1,29 @@
-import { Component } from '@angular/core';
-import {Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from "@angular/router";
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   constructor(
-     private router:Router
+      private router: Router
   ) {
+   
+  }
+
+  ngOnInit(): void {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (isLoggedIn === 'true') {
       this.loginCheck = true;
-    }
-    else {
+    } else {
       this.loginCheck = false
     }
-  }
+    }
+
+  
   loginCheck = true;
   login = false;
   logout() {
@@ -29,6 +35,6 @@ export class LoginComponent {
   loginSubmit() {
     this.login = true;
     localStorage.setItem('isLoggedIn', this.login.toString()); // Store login status as a string
-    this.router.navigate(["/"])
+    this.router.navigate([""])
   }
 }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  images: string[] = ["assets/images/homePages1.png", "assets/images/homePages2.png",  /* Add more images */];
+  images: string[] = ["assets/images/homePages1.png", "assets/images/photo_home1.jpg","assets/images/photo_home2.jpg","assets/images/photo_home3.jpg",  /* Add more images */];
   currentFrame: number = 0;
   imageSrc: string = this.images[this.currentFrame];  // Initial image source
 

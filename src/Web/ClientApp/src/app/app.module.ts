@@ -8,7 +8,7 @@ import {AuthorizeInterceptor} from 'src/api-authorization/authorize.interceptor'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppMaterialModule} from "./app-material.model";
 import {NavMenuComponent} from "./UI/nav-menu/nav-menu.component";
-import {AppRoutingModule} from "./router-modul";
+import {AppRoutingModule} from "./app.router-modul";
 import {HomeComponent} from "./UI/home/home.component";
 import {BaseHelperCompannet} from "./Core/Helper/BaseHelperCompannet";
 import {FormBaseComponent} from "./Core/Helper/FormBaseComponent";

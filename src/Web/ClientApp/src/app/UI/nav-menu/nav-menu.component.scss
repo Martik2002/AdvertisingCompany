@@ -31,4 +31,15 @@ nav{
 .navbar-brand{
   color: white !important;
 }
+.logo {
+  width: 40px; /* Set the width of the container */
+  height: 40px; /* Set the height of the container */
+  border-radius: 50%; /* Create a circular shape */
+  overflow: hidden; 
+  margin-right:10px ;
+}
+
+.logo img {
+  vertical-align: middle; /* Align the image vertically with text */
+}
 

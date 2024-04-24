@@ -1,16 +1,26 @@
-<div *ngIf="!this.loginCheck" class="container">
+
+<div *ngIf="!this.loginCheck" class="background-images">
+    <div *ngIf="!this.loginCheck" class="container">
     <h2>Login</h2>
     <form action="/login" method="post">
         <input type="text" name="username" placeholder="Username" required>
         <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" (click)="loginSubmit()" value="Login">
+        <input class="but" type="submit" (click)="loginSubmit()" value="Login">
     </form>
+    </div>
+    
 </div>
 
-<div *ngIf="this.loginCheck"  class="logout-dialog">
-    <h2>Are you sure you want to log out?</h2>
+
+<div *ngIf="this.loginCheck" class="logout-dialog">
+    <h2>Դուք համոզված էք ո՞ր ցանկանում եմ դուրս գալ համակարգից</h2>
     <div class="logout-buttons">
-        <button mat-button class="but" [mat-dialog-close]="true" (click)="logout()">Logout</button>
-        <button mat-button [mat-dialog-close]="false" >Cancel</button>
+        <button mat-button class="but" [mat-dialog-close]="true" (click)="logout()">
+            <mat-icon>
+                logout
+            </mat-icon>
+            Դուրս գալ 
+        </button>
+        <button mat-button [mat-dialog-close]="false">Չեղարկել</button>
     </div>
 </div>

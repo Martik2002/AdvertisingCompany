@@ -11,8 +11,9 @@ import {Router} from "@angular/router";
     styleUrls: ['./nav-menu.component.scss']
 })
 export class NavMenuComponent extends BaseHelperCompannet {
+    
     private _logoutDialod: MatDialogRef<LoginComponent>;
-
+    logout: boolean = true;
     constructor(
         private dialog: MatDialog,
         private router: Router,
@@ -24,13 +25,13 @@ export class NavMenuComponent extends BaseHelperCompannet {
 
         this._logoutDialod = this.dialog.open(LoginComponent, {
             width: '500px',
-            height: '500px',
             disableClose: true,
             autoFocus: false
         })
         this._subs.add(
             this._logoutDialod.afterClosed().subscribe((needToUpdate: boolean) => {
                   if (needToUpdate){
+                      this.logout = false;
                     this.router.navigate(["auth"]);
                   }
                     this._logoutDialod = undefined

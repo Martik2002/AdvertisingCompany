@@ -1,7 +1,8 @@
-<header>
+<header *ngIf="this.logout">
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container">
-            <a class="navbar-brand" [routerLink]="['/']">Գովազդային Գործակալություն</a>
+            <img src="assets/images/logo.png" class="logo"  width="40px" height="40px">
+            <a class="navbar-brand" [routerLink]="['/']">GROWUS</a>
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
                 <ul class="navbar-nav flex-grow">
                     <li class="nav-item"
@@ -12,14 +13,14 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="/buyAll">Վաճառք</a>
                     </li>
-                  <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link text-dark" href="/agent">Գործակալ</a>
-                    </li>
- <!--                   <li>
-                        <a class="nav-link text-dark" href="/api" target="_blank">API</a>
+                    </li> 
+             <!--       <li class="nav-item">
+                        <a class="nav-link text-dark" href="/agent">Կապ մեզ հետ </a>
                     </li>-->
                     <li>
-                        <a class="nav-link text-dark" (click)="openLogoutDialog()" >ելք</a>
+                        <a class="nav-link text-dark" (click)="openLogoutDialog()">Ելք</a>
                     </li>
 
                 </ul>
