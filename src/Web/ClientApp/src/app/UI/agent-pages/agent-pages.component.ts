@@ -4,22 +4,22 @@ import {MatTableModule} from "@angular/material/table";
 export interface PeriodicElement {
     index: number;
     type: string;
+    price:number;
+    name:string;
     position: number;
-    addres: number;
+    addres: string;
     phone: string;
+    email:string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-    {position: 1,index: 1, type: 'Hydrogen', addres: 1.0079, phone: 'H'},
-    {position: 2,index: 2, type: 'Helium', addres: 4.0026, phone: 'He'},
-    {position: 3,index: 3, type: 'Lithium', addres: 6.941, phone: 'Li'},
-    {position: 4,index: 4, type: 'Beryllium', addres: 9.0122, phone: 'Be'},
-    {position: 5,index: 5, type: 'Boron', addres: 10.811, phone: 'B'},
-    {position: 6,index: 6, type: 'Carbon', addres: 12.0107, phone: 'C'},
-    {position: 7,index: 7, type: 'Nitrogen', addres: 14.0067, phone: 'N'},
-    {position: 8,index: 8, type: 'Oxygen', addres: 15.9994, phone: 'O'},
-    {position: 9,index: 9, type: 'Fluorine', addres: 18.9984, phone: 'F'},
-    {position: 10,index: 10, type: 'Neon', addres: 20.1797, phone: 'Ne'},
+    {position: 1,index: 1, type: 'Վարձով',price:500 , name: "Լիաննա",addres:"Սայաթ Նովա 5", phone: '044-12-54-77',email:"liannaayvazyan@gmail.com"},
+    {position: 2,index: 2, type: 'Վաճառք',price:85000 , name: "Արամ",addres:"Մարշալ Բաղրամյան 54", phone: '077-32-54-17',email:"Aramarzumanyan@gmail.com"},
+    {position: 3,index: 3, type: 'Վաճառք',price:75000 , name: "Աշոտ",addres:"Զորավար Անդրանիկ 89", phone: '066-66-66-66',email:"Ashotghazaryan@gmail.com"},
+    {position: 4,index: 4, type: 'Վարձով',price:1500 , name: "Կարինե",addres:"Սայաթ Նովա 37", phone: '014-19-03-77',email:"Karinearzumanyan@gmail.com"},
+    {position: 5,index: 5, type: 'Վարձով',price:500 , name: "Մանվել",addres:"Գուսան Շերամի 77", phone: '077-77-77-77',email:"Manvelhayrapetyan@gmail.com"},
+    {position: 6,index: 6, type: 'Վաճառք',price:355000 , name: "Նունե",addres:"Կեչառեցու 32", phone: '056-12-34-56',email:"Nunemeliqyan@gmail.com"},
+
 ];
 
 @Component({
@@ -29,7 +29,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 })
 export class AgentPagesComponent {
-    displayedColumns: string[] = ['position','index', 'type', 'addres', 'phone', 'action'];
+    displayedColumns: string[] = ['position','index', 'type','price', 'addres', 'name', 'phone','email', 'action'];
     dataSource = ELEMENT_DATA;
 }
 
