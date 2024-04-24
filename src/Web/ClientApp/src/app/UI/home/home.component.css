@@ -101,7 +101,9 @@
 #contact-form textarea {
     resize: vertical;
 }
-
+#form-submit{
+  background-color: #ff7f0e;
+}
 
 #form-submit:hover {
     background-color: #e56e0a;
@@ -130,26 +132,26 @@
 }
 
 .image-with-text {
-    position: relative; 
+    position: relative;
     width: 100%;
     height: 100vh;
 }
 
 .image-with-text img {
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .image-with-text p {
-    bottom: 20px; 
-    color: white; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 10px; 
-    border-radius: 5px; 
+  font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    
+
 }

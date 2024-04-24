@@ -12,14 +12,14 @@ export const routes: Routes = [
         component: HomeComponent,
         pathMatch: 'full',
         canActivate: [AuthorizeGuard]
-        
+
     },
     {
         path:'buyAll',
         loadChildren: () => import("./UI/buy/buy.module").then(m => m.BuyModule),
         canActivate: [AuthorizeGuard]
 
-    }, 
+    },
     {
         path:'agent',
         loadChildren: () => import("./UI/agent-pages/AgentPages.modul").then(m => m.AgentPagesModul),
@@ -29,6 +29,11 @@ export const routes: Routes = [
     {
         path:'auth',
         loadChildren: () => import("./UI/login/login.modul").then(m => m.LoginModul),
+
+    },
+  {
+        path:'about',
+        loadChildren: () => import("./UI/about/AboutModul").then(m => m.AboutModul),
 
     },
     {

@@ -1,14 +1,14 @@
 
 <div *ngIf="!this.loginCheck" class="background-images">
     <div *ngIf="!this.loginCheck" class="container">
-    <h2>Login</h2>
+    <h2>Մուտք</h2>
     <form action="/login" method="post">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input class="but" type="submit" (click)="loginSubmit()" value="Login">
+        <input type="text" name="username" placeholder="Ծածկանուն" required>
+        <input type="password" name="password" placeholder="Գաղտնաբառ" required>
+        <input class="but" type="submit" (click)="loginSubmit()" value="Մուտք">
     </form>
     </div>
-    
+
 </div>
 
 
@@ -19,7 +19,7 @@
             <mat-icon>
                 logout
             </mat-icon>
-            Դուրս գալ 
+            Դուրս գալ
         </button>
         <button mat-button [mat-dialog-close]="false">Չեղարկել</button>
     </div>

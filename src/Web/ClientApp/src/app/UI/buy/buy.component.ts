@@ -23,7 +23,6 @@ export class BuyComponent extends BaseHelperCompannet{
   openCreateDialog(){
     this._upsertDialog = this.dialog.open(BuyCreateComponent, {
       width: '500px',
-      height:'600px',
       disableClose: true,
       autoFocus: false
     });

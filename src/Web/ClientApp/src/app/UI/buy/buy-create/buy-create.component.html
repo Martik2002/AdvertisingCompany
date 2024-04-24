@@ -5,38 +5,49 @@
             <mat-form-field appearance="outline">
                 <mat-label>Տեսակը</mat-label>
                 <input formControlName="type" matInput placeholder="Տուն">
-                <mat-error>{{V_MSG.REQUIRED}}</mat-error>
-                <mat-error>{{V_MSG.amLetters_space}}</mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Գինը</mat-label>
-                <input formControlName="price" matInput placeholder="50000դրամ">
-                <mat-error>{{V_MSG.REQUIRED}}</mat-error>
-                <mat-error>{{V_MSG.only_digits}}</mat-error>
+                <input formControlName="price" matInput placeholder="50000$">
+
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Հասցե</mat-label>
                 <input formControlName="addres" matInput placeholder="Երևան Տերյան 5">
-                <mat-error *ngIf="this.form.get('addres').errors.requkired">{{V_MSG.REQUIRED}}</mat-error>
-                <mat-error>{{V_MSG.amLetters_space}}</mat-error>   
             </mat-form-field>
         <section class="example-section">
             <span>Վարձույթի տեսակ:</span>
-            <mat-checkbox class="example-margin">Վարձով</mat-checkbox>
-            <mat-checkbox class="example-margin">Վաճառք</mat-checkbox>
+            <mat-checkbox   (click)="this.toggleSelection()" class="selected-checkbox">Վարձով</mat-checkbox>
+            <mat-checkbox class="selected-checkbox">Վաճառք</mat-checkbox>
         </section>
+
+      <div *ngIf="this.showInput">
+        <mat-form-field appearance="outline">
+          <mat-label>Քանակ</mat-label>
+          <input formControlName="addres" matInput placeholder="5">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>ժամանակահատված</mat-label>
+          <input formControlName="addres" matInput placeholder="6 ամիս և ավել">
+        </mat-form-field>
+      </div>
         <div class="form-group">
-            <label for="imageUpload">Նկարի կցում:</label>
-            <div>
+            <label  for="imageUpload">Նկարի ավելացում</label>
                 <input type="file" id="imageUpload" name="imageUpload" (change)="onFileSelected($event)">
                 <label for="imageUpload" class="custom-file-upload">
-                    Select Image
+                  <mat-icon>
+                    upload_file
+                  </mat-icon>
                 </label>
-                <img width="40px" height="40px" *ngIf="imageUrl" [src]="imageUrl" alt="Selected Image">
-            </div>
+              <div class="image-column">
+                <div *ngFor="let imgUrl of imageUrl" class="image-container">
+                  <img *ngIf="imgUrl" [src]="imgUrl" alt="Selected Image" class="selected-image">
+                </div>
+              </div>
+
 
         </div>
-        
+
             <mat-form-field appearance="outline">
                 <mat-label>Նկարագրություն</mat-label>
                 <textarea formControlName="descreption" cols="10" rows="5" matInput placeholder="Նկարագրություն"></textarea>

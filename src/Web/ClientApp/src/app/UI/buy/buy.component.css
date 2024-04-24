@@ -1,6 +1,12 @@
+
 .example-card {
-    max-width: 400px;
+  max-width: 400px;
+  display: inline-block;
+  width: calc(50% - 20px); /* Adjust the width as needed */
+  margin: 10px;
+  vertical-align: top;
 }
+
 
 .example-header-image {
     background-size: cover;
@@ -9,3 +15,13 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.crad-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+}
+img{
+  width: 400px;
+  height: 300px;
+}
+

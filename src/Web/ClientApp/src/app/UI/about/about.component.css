@@ -1,0 +1,22 @@
+﻿.about-us-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.team-member {
+  margin-top: 20px;
+}
+
+.team-member img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.team-member h3 {
+  margin-top: 10px;
+}
+
+.team-member p {
+  font-style: italic;
+}

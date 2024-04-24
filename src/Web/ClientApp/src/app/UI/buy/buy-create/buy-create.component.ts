@@ -26,7 +26,7 @@ export class BuyCreateComponent extends FormBaseComponent implements OnInit{
   ) {
     super(fb);
   }
-  
+
   ngOnInit() {
     this.initialForm()
   }
@@ -35,23 +35,23 @@ export class BuyCreateComponent extends FormBaseComponent implements OnInit{
       localStorage.setItem("upsert", )
     }
     */
-  
+
   submit(){
     if (this.form.invalid) return
   }
-  
+
   private initialForm() {
       this.form = this.fb.group({
-        type: new FormControl('', TypeValidation),
-        price: new FormControl('', PriceValidation),
-        addres: new FormControl('', AddresValidation),
-        descreption: new FormControl('', DescreptionValidation),
+        type: new FormControl('',),
+        price: new FormControl('', ),
+        addres: new FormControl('', ),
+        descreption: new FormControl('', ),
       });
-    
+
   }
 
 
-  imageUrl: string | ArrayBuffer | null = null;
+  imageUrl = [];
 
   onFileSelected(event: any): void {
     const file: File = event.target.files[0];
@@ -63,10 +63,14 @@ export class BuyCreateComponent extends FormBaseComponent implements OnInit{
   readImage(file: File): void {
     const reader = new FileReader();
     reader.onload = (e) => {
-      this.imageUrl = e.target?.result;
+      this.imageUrl.push(e.target?.result);
     };
     reader.readAsDataURL(file);
   }
 
+  showInput: boolean = false;
 
+  toggleSelection(): void {
+   this.showInput = !this.showInput
+  }
 }
